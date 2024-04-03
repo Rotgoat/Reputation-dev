@@ -1,0 +1,123 @@
+// Заголовки, общие БЄМ блоки и проче...
+.btn {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: rem(10) rem(16);
+    font-weight: 700;
+    border-radius: rem(5);
+    transition: background-color .3s ease 0s;
+
+    &:active {
+        transform: translateY(1px);
+        opacity: 0.75;
+        transition: transform 0s;
+    }
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: var(--white);
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: var(--accentHover);
+        }
+    }
+}
+
+.btn-secondary {
+    background-color: var(--secondaryBg);
+    color: var(--textColor);
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: var(--secondaryHover);
+        }
+    }
+}
+
+.btn-w-icon {
+    gap: rem(5);
+
+    &::before {
+        font-size: rem(20);
+    }
+}
+
+.title {
+    font-family: "Arial black", "Arial", Helvetica, sans-serif;
+    font-size: rem(40);
+    font-weight: 400;
+    color: var(--white);
+    line-height: normal;
+
+    @media (max-width:1160px) {
+        font-size: rem(30);
+    }
+
+    @media (max-width:$mobile) {
+        font-size: rem(24);
+    }
+
+    &._dark {
+        color: var(--textColor);
+    }
+}
+
+.btn-lg {
+    padding: rem(16) rem(24);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+
+.checkbox {
+    position: relative;
+    width: rem(15);
+    height: rem(15);
+    flex: 0 0 rem(15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--white);
+    border: rem(1) solid #999999;
+    border-radius: 2px;
+    pointer-events: none;
+
+
+    &::before {
+        content: '';
+        background-color: #666666;
+        position: absolute;
+        left: rem(1);
+        bottom: rem(3);
+        width: rem(5);
+        height: rem(2);
+        transform: rotate(40deg);
+        border-radius: rem(6);
+        opacity: 0;
+        transition: all 0.3s ease 0s;
+    }
+
+    &::after {
+        content: '';
+        background-color: #666666;
+        border-radius: rem(6);
+        position: absolute;
+        left: rem(7);
+        bottom: rem(1);
+        width: rem(2);
+        height: rem(11);
+        transform: rotate(40deg);
+        opacity: 0;
+        transition: all 0.3s ease 0s;
+
+    }
+}
