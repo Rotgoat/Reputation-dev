@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section class="intro-section">
+				<div class="intro-section__bg">
+					<div class="intro-section__container">
+						<div class="intro-section__person person">
+							<div class="person__img">
+								<img src="@img/max-kolesov.png" alt="Max Kolesov">
+								<div class="person__about">
+									<div class="person__name">Максим <span>Колесов</span></div>
+									<div class="person__job">Руководитель отдела экспертов</div>
+								</div>
+							</div>
+
+						</div>
+						<div class="intro-section__content">
+							<h1 class="intro-section__title title">Удаление нежелательной информации для директоров</h1>
+							<form class="intro-section__form form-intro" action="#!">
+								<div class="form-intro__form-group">
+									<input class="form-intro__input" placeholder="Ваш телефон или email" type="text">
+									<button type="submit" class="btn btn-primary btn-lg">Узнать точную цену</button>
+								</div>
+								<div class="form-intro__check">
+									<input type="checkbox" checked="checked" id="agreement">
+									<span class="checkbox"></span>
+									<label for="agreement">
+										Отправляя форму, я даю свое <a href="#!"> согласие на обработку
+											персональных данных</a>.
+									</label>
+								</div>
+							</form>
+							<button class="intro-section__btn-delete btn btn-outline">Начать удаление</button>
+						</div>
+					</div>
+				</div>
+				<div class="intro-section__mobile __container">
+					<h1 class="intro-section__title title _dark">
+						Удаление нежелательной информации для директоров
+					</h1>
+					<form class="intro-section__form form-intro" action="#!">
+						<div class="form-intro__form-group _icon-lock">
+							<input class="form-intro__input" placeholder="Ваш телефон или email" type="text">
+							<button type="submit" class="form-intro__btn btn btn-primary btn-lg">Узнать точную
+								цену</button>
+						</div>
+						<div class="form-intro__check">
+							<input type="checkbox" checked="checked" id="agreement">
+							<span class="checkbox"></span>
+							<label for="agreement">
+								Отправляя форму, я даю свое <a href="#!"> согласие на обработку
+									персональных данных</a>.
+							</label>
+						</div>
+					</form>
+				</div>
+			</section>
+			<section class="info-section">
+				<div class="info-section__container">
+					<h2 class="info-section__title title _dark">
+						Как вредят негативные отзывы
+					</h2>
+					<p class="info-section__descr">
+						Негативные отзывы могут увидеть не только соискатели и клиенты, но и семья, друзья, партнеры.
+					</p>
+					<ul class="info-section__nasty nasty">
+						<li class="nasty__item">Затрудненный и<br> дорогой клиент</li>
+						<li class="nasty__item">Вероятность внезапных<br> проверок органами</li>
+						<li class="nasty__item">Потеря прибыли<br> и клиентов</li>
+						<li class="nasty__item">Головная боль и оправдания<br> перед партнерами</li>
+
+					</ul>
+					<ul class="info-section__percent percent">
+						<li class="percent__item">
+							<div class="percent__title">34% <br>
+								проверок </div>
+							<p class="percent__text">
+								органами инициируются после негативных отзывов о работодателе.
+								<span data-tippy-content="Подсказка">Почему?</span>
+							</p>
+						</li>
+						<li class="percent__item">
+							<div class="percent__title">80% <br>
+								соискателей</div>
+							<p class="percent__text">
+								читают отзывы о компании перед отправкой резюме или собеседованием
+							</p>
+						</li>
+						<li class="percent__item">
+							<div class="percent__title">70% <br>
+								клиентов</div>
+							<p class="percent__text">
+								отказываются от услуг компании, если увидят больше 4 негативных ссылок в поиске
+							</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
